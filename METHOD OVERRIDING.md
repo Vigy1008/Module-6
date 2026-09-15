@@ -1,4 +1,4 @@
-# Exp.No:26  
+# Exp.No:6d  
 ## Method Overriding
 
 ---
@@ -33,48 +33,35 @@ To write a Python program to create a Parent class `Bird` and inherit two child 
 
 ### PROGRAM
 
-```
-#Reg_no: 212223060288
-#Name: Tharun Kumaran G
-
-class Bird:
-    def intro(self):
-        print("There are many types of birds.")
-
-    def flight(self):
-        print("Most of the birds can fly but some cannot.")
-
-class Sparrow(Bird):
-    def flight(self):
-        super().intro()
-        print("Sparrows can fly.")
-
-class Ostrich(Bird):
-    def flight(self):
-        super().intro()
-        print("Ostriches cannot fly.")
-
-obj_bird = Bird()
-obj_spr = Sparrow()
-obj_ost = Ostrich()
-
-obj_bird.intro()
-
-print("\nBird:")
-obj_bird.flight()
-
-print("\nSparrow:")
-obj_spr.flight()
-
-print("\nOstrich:")
-obj_ost.flight()
-
+```python
+from abc import ABC, abstractmethod   
+class Car(ABC):   
+    def mileage(self):
+        pass
+class Tesla(Car):   
+    def mileage(self):   
+        print("The mileage is 30kmph")   
+class Suzuki(Car):   
+    def mileage(self):   
+        print("The mileage is 25kmph ")   
+class Duster(Car):   
+    def mileage(self):
+        print("The mileage is 24kmph ")   
+class Renault(Car):
+    def mileage(self):
+        print("The mileage is 27kmph ")   
+t = Tesla()
+t.mileage()
+r = Renault()
+r.mileage()
+s = Suzuki()   
+s.mileage()   
+d = Duster()   
+d.mileage()
 ```
 
 ### OUTPUT
-
-![image](https://github.com/user-attachments/assets/f1055e07-4363-4ed5-94a5-1f694a072306)
+<img width="1181" height="257" alt="image" src="https://github.com/user-attachments/assets/f4ec77ae-54b5-49b3-ad5a-871c16776fff" />
 
 ### RESULT
-
-The python program to create a Parent class `Bird` and inherit two child classes `Sparrow` and `Ostrich` from the `Bird` class with the same method `flight()` has been executed and verified successfully.
+Therefore, the output is the example to write a Python program to create a Parent class `Bird` and inherit two child classes `Sparrow` and `Ostrich` from the `Bird` class with the same method `flight()`. Create an object for each class and call the methods of the class which will print the name of the bird that is flying.
