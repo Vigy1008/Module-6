@@ -1,4 +1,4 @@
-# Exp.No:29  
+# Exp.No:6c  
 ## Encapsulation
 
 ---
@@ -25,36 +25,30 @@ To write a Python program to create a class `Student` with the private members `
 
 ### PROGRAM
 
-```
-#Reg_no: 212223060288
-#Name: Tharun Kumaran G
-
+```python
 class Student:
-    def __init__(self, name, age):
+    def __init__(self, name, roll_no, age):
         self.name = name
+        self.__roll_no = roll_no
         self.__age = age
-
-    def get_age(self):
-        return self.__age
-
-    def set_age(self,age):
-        self.__age=age
-    
-
-stud = Student('Jessa', 14)
-
-print('Name:', stud.name, stud.get_age())
-
-stud.set_age(16)
-
-print('Name:', stud.name, stud.get_age())
-
+    def show(self):
+        print('Student Details:', self.name, self.__roll_no)
+    def get_roll_no(self):
+        return self.__roll_no
+    def set_roll_no(self, number):
+        if number > 50:
+            print('Invalid roll no. Please set correct roll number')
+        else:
+            self.__roll_no = number
+jessa = Student('Jessa', 10, 15)
+jessa.show()
+jessa.set_roll_no(120)
+jessa.set_roll_no(25)
+jessa.show()
 ```
 
 ### OUTPUT
-
-![image](https://github.com/user-attachments/assets/824299a1-7b78-4050-a494-5944a5b357df)
+<img width="1182" height="238" alt="image" src="https://github.com/user-attachments/assets/3e12b023-ec4e-42c1-aaf7-34d37723df72" />
 
 ### RESULT
-
-Thus, the python program to create a class `Student` with the private members `name` and `age` has been executed and verified successfully.
+Therefore, the output is the example to write a Python program to create a class `Student` with the private members `name` and `age`, and add getter and setter methods to initialize and modify the `age` variable.
